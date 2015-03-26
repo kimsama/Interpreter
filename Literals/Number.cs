@@ -127,6 +127,17 @@ namespace HiSystems.Interpreter
             return new Number(value1.value * value2.value);
         }
 
+        public static Number operator^(Number value1, Number value2)
+        {
+            
+            double v1 = (double)value1.value;
+            double v2 = (double)value2.value;
+            //double result = v1 ^ v2;
+            double result = Math.Pow(v1, v2);
+             
+            return new Number((decimal)result);
+        }
+
         public static Number operator%(Number value1, Number value2)
         {
             return new Number(value1.value % value2.value);
